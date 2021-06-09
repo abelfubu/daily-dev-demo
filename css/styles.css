@@ -1,0 +1,250 @@
+* {
+  font-family: 'IBM Plex Mono', monospace;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary: #151618;
+  --primary-dark: #202122;
+  --primary-light: #4c5057;
+  --secondary: #fff;
+  --secondary-light: #fff8;
+  --accent: #ff468e;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--secondary-light);
+  height: 200vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-bottom: 0.5px solid var(--primary-light);
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+header li {
+  font-weight: 700;
+  padding: 0 0.25rem;
+}
+
+
+header i {
+  padding: 0.5rem;
+  min-width: 2rem;
+  border-radius: 5px;
+}
+
+header li:first-child {
+  padding-left: 0.75rem;
+  border-radius: 5px;
+}
+
+header li:first-child:hover,
+header i:hover {
+  color: var(--secondary);
+  background-color: var(--primary-light);
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+
+header .logo img {
+  width: 2rem;
+  padding-right: 0.5rem;
+}
+
+header .logo span {
+  font-weight: 300;
+}
+
+header .icons img {
+  width: 1.5rem;
+  border-radius: 5px;
+}
+
+header li:last-child a {
+  background-color: var(--primary-light);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+header li:last-child a::before { 
+  content: '1';
+  font-size: 0.8rem;
+  font-weight: 400;
+  padding: 0 0.3rem;
+}
+
+/* MAIN  */
+.arrow-right {
+  border: 0.5px solid var(--primary-light);
+  border-left: none;
+  border-radius: 0 12px 12px 0;
+  font-size: 1.2rem;
+  display: inline;
+  padding: 1.2rem 1rem;
+  position: fixed;
+  left: 0;
+  top: 6rem;
+  cursor: pointer;
+}
+
+.arrow-right:hover {
+  color: #fff;
+}
+
+.fa-chevron-up {
+  font-size: 2rem;
+  color: #000;
+  background-color: var(--secondary-light);
+  display: inline;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.fa-chevron-up:hover {
+  background-color: #fff;
+  position: relative;
+}
+
+main {
+  padding: 4rem 8vw;
+}
+
+main nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+main nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+main nav li {
+  margin-right: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+main nav p i:hover,
+main nav li:hover {
+  background-color: var(--primary-light);
+  color: #fff;
+}
+
+main nav p i {
+  padding: 0.5rem;
+  border-radius: 5px;
+  cursor: pointer; 
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.grid .card {
+  background-color: var(--primary-dark);
+  position: relative;
+  cursor: pointer;
+}
+
+.grid .card::before {
+  content: '\f024';
+  font-family: "Font Awesome 5 Free";  
+  position:  absolute;
+  top: 0.8rem;
+  right: 1rem;
+  opacity: 0;
+}
+
+.grid .card:hover::before {
+  opacity: 1;
+}
+
+/* CARDS  */
+.grid .card:first-child .bg-img {
+  background-image: url(https://images.unsplash.com/photo-1623042513067-1c5383626620?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80);
+}
+
+.grid .card:first-child .img-badge {
+  background-image: url(https://res.cloudinary.com/daily-now/image/upload/t_logo,f_auto/v1/logos/aa18ef18c93e4a3aab93a94d4c519163);
+}
+
+.grid .card:nth-child(2) .bg-img {
+  background-image: url(https://images.unsplash.com/photo-1623180873634-b5429204b98b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+}
+
+.grid .card:nth-child(3) .bg-img {
+  background-image: url(https://images.unsplash.com/photo-1623095517737-bcdd0c8fee76?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80);
+}
+
+.grid .card:nth-child(4) .bg-img {
+  background-image: url(https://images.unsplash.com/photo-1623182592914-b5af5d49f070?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+}
+
+.grid .card:nth-child(5) .bg-img {
+  background-image: url(https://images.unsplash.com/photo-1623141629222-287c9e385a40?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+}
+
+.grid .card:nth-child(6) .bg-img {
+  background-image: url(https://images.unsplash.com/photo-1623145140935-ba2d808d097e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1936&q=80);
+}
+
+.grid .card:nth-child(7) .bg-img {
+  background-image: url(https://images.unsplash.com/photo-1623044340351-622a81d94e1a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80);
+}
+
+.grid .card:nth-child(8) .bg-img {
+  background-image: url(https://images.unsplash.com/photo-1623167862201-44aa8e8a2dbd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1949&q=80);
+}
+
+.grid .card:nth-child(9) .bg-img {
+  background-image: url(https://images.unsplash.com/photo-1623162904188-c9ed16c88792?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1868&q=80);
+}
+
+.grid .card:nth-child(10) .bg-img {
+  background-image: url(https://images.unsplash.com/photo-1623185356902-4f15d4d30ccd?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80);
+}
+
+.grid .card:nth-child(11) .bg-img {
+  background-image: url(https://images.unsplash.com/photo-1623114112824-11c74f2b58dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);
+}
+
+.grid .card:nth-child(12) .bg-img {
+  background-image: url(https://images.unsplash.com/photo-1623180872639-419a60085406?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80);
+}
+
