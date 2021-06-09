@@ -18,7 +18,7 @@
 }
 
 body {
-  background-color: var(--primary);
+  background-color: red;
   color: var(--secondary-light);
   height: 200vh;
 }
